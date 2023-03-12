@@ -23,7 +23,7 @@ public class Jugador implements Comparable<Jugador>{
 	private Integer asistencias;
 	private Integer robos;
 	private Integer puntos;
-	
+	private Posiciones posicion;
 	
 	
 	public Jugador(String nombre, String equipo,Posiciones posicion ,Integer altura, Integer peso, Double imc, String pais_nac,
@@ -34,6 +34,7 @@ public class Jugador implements Comparable<Jugador>{
 		Checkers.check("La fecha del cumpleaños es posterior a la actual", cumpleanyos.isBefore(LocalDate.now()));
 		this.nombre = nombre;
 		this.equipo = equipo;
+		this.posicion = posicion;
 		this.altura = altura;
 		this.peso = peso;
 		this.imc = imc;
@@ -86,6 +87,19 @@ public class Jugador implements Comparable<Jugador>{
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
+
+	
+
+	public Posiciones getPosicion() {
+		return posicion;
+	}
+
+
+
+	public void setPosicion(Posiciones posicion) {
+		this.posicion = posicion;
+	}
+
 
 
 	public Integer getAltura() {
@@ -270,17 +284,19 @@ public class Jugador implements Comparable<Jugador>{
 		return x;
 	}
 	
-
+	
 	@Override
 	public String toString() {
-		return "Jugador [getNombre()=" + getNombre() + ", getEquipo()=" + getEquipo() + ", getAltura()=" + getAltura()
-				+ ", getPeso()=" + getPeso() + ", getImc()=" + getImc() + ", getPais_nac()=" + getPais_nac()
-				+ ", getCumpleanyos()=" + getCumpleanyos() + ", getEdad()=" + getEdad() + ", getUniversidad()="
-				+ getUniversidad() + ", getAllStar()=" + getAllStar() + ", getPartidos()=" + getPartidos()
-				+ ", getMinutos()=" + getMinutos() + ", getRebotes()=" + getRebotes() + ", getAsistencias()="
-				+ getAsistencias() + ", getRobos()=" + getRobos() + ", getPuntos()=" + getPuntos()
-				+ ", EdadActual()=" + EdadActual() + ", Joven()=" + Joven() + "]";
+		return "Jugador [getNombre()=" + getNombre() + ", getEquipo()=" + getEquipo() + ", getPosicion()="
+				+ getPosicion() + ", getAltura()=" + getAltura() + ", getPeso()=" + getPeso() + ", getImc()=" + getImc()
+				+ ", getPais_nac()=" + getPais_nac() + ", getCumpleanyos()=" + getCumpleanyos() + ", getEdad()="
+				+ getEdad() + ", getUniversidad()=" + getUniversidad() + ", getAllStar()=" + getAllStar()
+				+ ", getPartidos()=" + getPartidos() + ", getMinutos()=" + getMinutos() + ", getRebotes()="
+				+ getRebotes() + ", getAsistencias()=" + getAsistencias() + ", getRobos()=" + getRobos()
+				+ ", getPuntos()=" + getPuntos() + ", EdadActual()=" + EdadActual() + ", Joven()=" + Joven()
+				+ "]";
 	}
+
 
 
 	public String getFormatoCadena() {
