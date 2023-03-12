@@ -279,7 +279,7 @@ public class Jugador implements Comparable<Jugador>{
 				+ getUniversidad() + ", getAllStar()=" + getAllStar() + ", getPartidos()=" + getPartidos()
 				+ ", getMinutos()=" + getMinutos() + ", getRebotes()=" + getRebotes() + ", getAsistencias()="
 				+ getAsistencias() + ", getRobos()=" + getRobos() + ", getPuntos()=" + getPuntos()
-				+ ", getEdadActual()=" + EdadActual() + ", getJoven()=" + Joven() + "]";
+				+ ", EdadActual()=" + EdadActual() + ", Joven()=" + Joven() + "]";
 	}
 
 
