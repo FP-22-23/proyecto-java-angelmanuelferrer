@@ -1,6 +1,9 @@
-package fp.baloncesto;
+package fp.test;
 
 import java.time.LocalDate;
+
+import fp.baloncesto.Jugador;
+import fp.baloncesto.Posiciones;
 
 public class Test_Jugador {
 
@@ -12,7 +15,7 @@ public class Test_Jugador {
 				"Duke", true, 30, 947, 101, 72, 63, 217);
 		System.out.println(j1);
 		System.out.println(j2.getFormatoCadena());
-		System.out.println(j1.getMismoEquipo(j2));
+		System.out.println(j1.MismoEquipo(j2));
 		System.out.println(j1.compareTo(j2));
 
 	}

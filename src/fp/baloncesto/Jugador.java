@@ -54,8 +54,8 @@ public class Jugador implements Comparable<Jugador>{
 	
 	public Jugador(String nombre, Integer altura, Integer peso, Double imc,
 			LocalDate cumpleanyos, Integer edad) {
-		Checkers.check("La fecha del cumpleaños es posterior a la actual", cumpleanyos.isBefore(LocalDate.now()));
 		Checkers.checkNoNull(nombre, altura, peso, imc, cumpleanyos, edad);
+		Checkers.check("La fecha del cumpleaños es posterior a la actual", cumpleanyos.isBefore(LocalDate.now()));
 		this.nombre = nombre;
 		this.equipo = null;
 		this.altura = altura;
@@ -227,7 +227,7 @@ public class Jugador implements Comparable<Jugador>{
 	}
 
 
-	public Integer getEdadActual() {
+	public Integer EdadActual() {
 		Integer edad = LocalDate.now().getYear() - getCumpleanyos().getYear() - 1;
 		
 		if (getCumpleanyos().getMonthValue() < LocalDate.now().getMonthValue()) {
@@ -239,7 +239,7 @@ public class Jugador implements Comparable<Jugador>{
 		return edad;
 	}
 	
-	public Boolean getJoven() {
+	public Boolean Joven() {
 		Boolean res = false;
 		if (getEdad() <= 25) {
 			res = true;
@@ -247,7 +247,7 @@ public class Jugador implements Comparable<Jugador>{
 		return res;
 	}
 	
-	public Boolean getMismoEquipo(Jugador j) {
+	public Boolean MismoEquipo(Jugador j) {
 		Boolean res = false;
 		if (getEquipo().equals(j.equipo)) {
 			res = true;
@@ -279,7 +279,7 @@ public class Jugador implements Comparable<Jugador>{
 				+ getUniversidad() + ", getAllStar()=" + getAllStar() + ", getPartidos()=" + getPartidos()
 				+ ", getMinutos()=" + getMinutos() + ", getRebotes()=" + getRebotes() + ", getAsistencias()="
 				+ getAsistencias() + ", getRobos()=" + getRobos() + ", getPuntos()=" + getPuntos()
-				+ ", getEdadActual()=" + getEdadActual() + ", getJoven()=" + getJoven() + "]";
+				+ ", getEdadActual()=" + EdadActual() + ", getJoven()=" + Joven() + "]";
 	}
 
 
