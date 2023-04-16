@@ -79,11 +79,40 @@ Representa un jugador de la NBA.
 
 #### Tipos auxiliares
 
-- Posiciones, enumerado. Puede tomar los valores F,G,C,GF,FC.
+- Estadisticas, record. Contiene las siguientes propiedades: -rebotes, tipo Integer.-asistencias, tipo Integer.-robos, tipo Integer.-puntos, tipo Integer.
 
 **Otras operaciones**:
 - _Integer edadActual()_: Devuelve la edad actual del jugador.
 - _Boolean Joven()_: Devuelve true si la edad actual del jugador es menor o igual a 25.
+
+### Factoría - FactoriaJugadores
+Clase de factoría pra construir objetos de tipo Jugadores.
+- Jugadores leerJugadores(String nomfich): Crea un objeto de tipo Jugadores a partir de los datos del csv.
+
+### Tipo Contenedor - Jugadores
+Clase contenedora de los objetos de tipo Jugador.
+
+**Propiedades**:
+- jugadores, de tipo Set<Jugador>, consultable. Conjunto de Jugadores.
+
+**Constructores**: 
+- C1: Constructor por defecto. Creal un objeto de tipo Jugadores sin ningun jugador almacenado.
+- C2: Constructor con un parámetro de tipo Set<Jugador>. Crea un objeto de tipo Jugadores con los jugadores incluidos en el conjunto dado como parámetro.
+
+**Criterio de igualdad**: Dos jugadores son iguales si lo son sus propiedades jugadores.
+
+**Otras operaciones**:
+
+- void numeroElementos(): Devuelve el número de jugadores.
+- void añadirJugador(Jugador jugador): Añade el jugador a jugadores.
+- void añadirColeccionElementos(Collection<Jugador> coleccion): Añade todos los jugadores de la colección a jugadores.
+- void eliminarElemento(Jugador j): Elimina el Jugador j de los jugadores.
+- Boolean existenAllStar(): Devuelve true si el objeto Jugadores contiene algún Jugador con allStar true.
+- Integer contarJugadoresDeEquipo(String equipo): Devuelve el número de jugadores que contiene el objeto Jugadores que estan en ese equipo.
+- Set<Jugador> jugadoresDePosicion(String posicion): Devuelve los jugadores que tienen esa posición.
+- Map<String, Set<Jugador>> jugadoresPorUniversidad(): Devuelve un map en el que las claves son las universidades y los valores los jugadores que pertenecen a esas universidades.
+- Map<Posiciones, Integer> puntosPorPosicion(): Devuelve un map en el que las claves son las posiciones y los valores el total de puntos marcados por esas posiciones.
+
 
 
 

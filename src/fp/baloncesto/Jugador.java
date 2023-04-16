@@ -284,17 +284,15 @@ public class Jugador implements Comparable<Jugador>{
 		return x;
 	}
 	
-	
+
+
 	@Override
 	public String toString() {
-		return "Jugador [getNombre()=" + getNombre() + ", getEquipo()=" + getEquipo() + ", getPosicion()="
-				+ getPosicion() + ", getAltura()=" + getAltura() + ", getPeso()=" + getPeso() + ", getImc()=" + getImc()
-				+ ", getPais_nac()=" + getPais_nac() + ", getCumpleanyos()=" + getCumpleanyos() + ", getEdad()="
-				+ getEdad() + ", getUniversidad()=" + getUniversidad() + ", getAllStar()=" + getAllStar()
-				+ ", getPartidos()=" + getPartidos() + ", getMinutos()=" + getMinutos() + ", getRebotes()="
-				+ getRebotes() + ", getAsistencias()=" + getAsistencias() + ", getRobos()=" + getRobos()
-				+ ", getPuntos()=" + getPuntos() + ", EdadActual()=" + EdadActual() + ", Joven()=" + Joven()
-				+ "]";
+		return "Jugador [nombre=" + nombre + ", equipo=" + equipo + ", altura=" + altura + ", peso=" + peso + ", imc="
+				+ imc + ", pais_nac=" + pais_nac + ", cumpleanyos=" + cumpleanyos + ", edad=" + edad + ", universidad="
+				+ universidad + ", allStar=" + allStar + ", partidos=" + partidos + ", minutos=" + minutos
+				+ ", rebotes=" + rebotes + ", asistencias=" + asistencias + ", robos=" + robos + ", puntos=" + puntos
+				+ ", posicion=" + posicion + "]";
 	}
 
 

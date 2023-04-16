@@ -17,6 +17,5 @@ public class Test_Jugador {
 		System.out.println(j2.getFormatoCadena());
 		System.out.println(j1.MismoEquipo(j2));
 		System.out.println(j1.compareTo(j2));
-
 	}
 }
