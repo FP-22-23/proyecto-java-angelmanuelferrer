@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
-
+import java.util.stream.Stream;
 import fp.utiles.Checkers;
 
 public class FactoriaJugadores {
@@ -54,5 +54,19 @@ public class FactoriaJugadores {
 				 cumpleanyos, edad, universidad, allStar, partidos, minutos,
 				 rebotes, asistencias, robos, puntos);
 }
+	
+	public static Jugadores leeJugadoresStream(String nombreFichero) {
+		Jugadores res = null;
+		try {
+			Stream<Jugador> j = Files.lines(Paths.get(nombreFichero))
+												.skip(1)
+												.map(FactoriaJugadores::parsearJugador);
+			res = new Jugadores(j);
+		} catch (IOException e) {
+			System.out.println("No se ha encontrado el fichero " + nombreFichero);
+			e.printStackTrace();
+		}
+		return res;
+	}
 }
 

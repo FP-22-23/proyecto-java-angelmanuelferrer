@@ -112,7 +112,15 @@ Clase contenedora de los objetos de tipo Jugador.
 - Set<Jugador> jugadoresDePosicion(String posicion): Devuelve los jugadores que tienen esa posición.
 - Map<String, Set<Jugador>> jugadoresPorUniversidad(): Devuelve un map en el que las claves son las universidades y los valores los jugadores que pertenecen a esas universidades.
 - Map<Posiciones, Integer> puntosPorPosicion(): Devuelve un map en el que las claves son las posiciones y los valores el total de puntos marcados por esas posiciones.
-
-
+- Boolean existenAllStarStream(): Lo mimo que esxistenAllStar() pero con Streams.
+- Integer contarJugadoresDeEquipoStream(String equipo): Lo mismo que contarJugadoresDeEquipo(String equipo) pero con Streams.
+- Set<Jugador> jugadoresDePosicionStream(String posicion): Lo mismo que jugadoresDePosicion(String posicion) pero con Streams.
+- Integer maximosPuntosEquipo(String equipo): Devuelve los maximos puntos de un equipo dado.
+- SortedSet<Jugador> jugadoresPosicionOrdenadosPuntos(String posicion): Devuelve un SortedSet del tipo base con los jugadores de la posición dada ordenados segun los puntos.
+- Map<String, Set<Jugador>> jugadoresPorUniversidadStream(): Hace lo mismo que jugadoresPorUniversidad pero usando Streams.
+- Map<Posiciones, Double> mediaPuntosPorPosiciones(): Crea un Map donde las claves son las posiciones y los valores son la media de los puntos que marcan todos los jugadores de esa posición.
+- Map<Posiciones,Integer> maximaEdadPorPosicion(): Crea un Mao donde las claves son las posiciones y los valores la mayor edad de un jugador con esa posición.
+- SortedMap<String, Set<Jugador>> nMejoresJugadoresPorEquipo(Long n): Crea un SortedMap donde las claves son los equipos y los valores una colección de los n mejores jugadores valorando primero los puntos, luego las asistencias, luego los robos y por último los rebotes.
+- edadMaxima(): Devuelve la edad máxima de todas las posiciones utilizando un Map ya creado anteriormente.
 
 
